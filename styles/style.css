@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-primario: #000000;
+    --color-secundario: #f6f6f6;
+    --color-terciario: #fd8c22;
+    --color-animalink: #272727;
+
+    --fuente-Principal: 'Montserrat', sans serif;
+    --fuente-Regular: 'Krona One', sans serif;
+}
+
+*{ /* este es para confugurar el universo de la pagina*/
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color:var(--color-primario);/*aqui se reempalza con var el color generico configurado al inicio*/
+    color: var(--color-secundario);
+    /*height: 100vh; /*Esto afecta el scroll es decir alargar la altura de la pagina para dispositivos*/
+    box-sizing: border-box;
+    margin: 1%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 1%;
+}
+.header{
+    padding: 2% 0% 0% 15%;
+}
+
+.headerMenu{
+    display: flex;
+    gap: 40px;
+}
+
+.headerMenuLink{
+    font-size: 1.5rem;
+    font-family: var(--fuente-Principal);
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--color-terciario);
+    text-decoration: none;/*para quitar la linea baja que automaticamente se genera para los link*/
+      
+}
+
+.presentacionUno{
+    padding: 2% 15%;    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--fuente-Regular);
+    font-style: normal;
+    gap:4rem;
+}
+
+.presentacionUnoHijo{
+    width: 50%;
+    display: flex; /*ojo con esta de debe usar con flex-directiontambie*/
+    flex-direction: column;
+    gap: 30px;
+}
+
+span{
+    color: var(--color-secundario);
+    border: 1px var(--color-terciario);
+    padding: 10px;
+    font-weight: 600;
+}
+
+.presentacionUnoHijoTitulo{
+    font-style: normal;
+    font-size: 2rem;
+}
+
+.titulo-destacar{
+    color: var(--color-terciario);
+    border: 1px var(--color-terciario);
+    padding: 1px;
+}
+
+.presentacionUnoHijoP{
+    font-size: 1.5rem;
+    font-family: var(--fuente-Principal);
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.presentacionUnoEnlaces{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;/*aqui logramos que los botoen e informacion contenida quede en columnas*/
+    align-items: center;
+    gap: 32px;
+}
+
+.presentacionUnoEnlacesSub{
+    font-family: var(--fuente-Regular);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.presentacionUnoEnlaceLink{
+    width: 55%;
+    text-align: center;
+    padding: 22px 0;
+    border: 2px solid var(--color-terciario);
+    border-radius: 16px;
+    font-family: var(--fuente-Principal);
+    font-size: 1.75rem;
+    font-weight: 800;
+    text-decoration: none;/*para quitar la linea baja que automaticamente se genera para los link*/
+    color: var(--color-secundario);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.presentacionUnoEnlaceLink:hover{/*este es para que cuando se pase el cursos cambie de color*/
+    background-color: #272727;
+}
+
+.presentacionImagen{
+    width: 50%;
+}
+
+.footer{
+    background-color: var(--color-terciario);
+    font-family: var(--fuente-Principal);
+    font-weight: 400;
+    font-size: 1.5rem;
+    padding: 12px;
+    color: var(--color-primario);
+    text-align: center;
+}
+
+
+@media (max-width: 1300px) {
+    .header{
+        padding: 6%;
+    }
+    .headerMenu{
+        justify-content: center;
+    }
+    .presentacionUno{
+        flex-direction: column-reverse;/*aquie asei que lo ultimo la imagen se ponga de */
+        padding: 5%;
+    } /* … (esto siempre es al final para que cuando el ancho de la pantalla cambie mejore la visual*/
+    .presentacionUnoHijo{
+        width: auto;
+    }
+  }
